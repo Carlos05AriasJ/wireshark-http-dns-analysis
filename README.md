@@ -8,7 +8,7 @@ Análisis técnico y práctico del tráfico de red utilizando el analizador de p
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 <div align="justify">
 
@@ -18,7 +18,7 @@ Comprender y analizar los procesos internos que ocurren en la pila de protocolos
 
 ---
 
-## 🧰 Herramientas Utilizadas
+## Herramientas Utilizadas
 
 <div align="justify">
 
@@ -30,7 +30,7 @@ Comprender y analizar los procesos internos que ocurren en la pila de protocolos
 
 ---
 
-## 🗺️ Funcionamiento General de una Búsqueda Web (HTTPS)
+## Funcionamiento General de una Búsqueda Web (HTTPS)
 
 <div align="justify">
 
@@ -47,23 +47,23 @@ El proceso general observado durante una navegación HTTPS puede resumirse de la
 
 </div>
 
-### 🖼️ Evidencia Visual: Funcionamiento general
+### Evidencia Visual: Funcionamiento general
 
 ![Esquema de Flujo](img/Esquema-Flujo-HTTPS.png)
 
 ---
 
-## 🔎 Captura y Análisis Práctico de Protocolos
+## Captura y Análisis Práctico de Protocolos
 
 <div align="justify">
 
-> 🔒 **Nota sobre Privacidad y OPSEC:** Como buena práctica de seguridad y gestión de infraestructura, todas las capturas de pantalla utilizadas en este análisis han sido parcialmente anonimizadas. Se han ocultado identificadores innecesarios, como direcciones MAC y el direccionamiento IP privado real del entorno de pruebas, para evitar exponer información de la infraestructura local en un repositorio público.
+> **Nota sobre Privacidad y OPSEC:** Como buena práctica de seguridad y gestión de infraestructura, todas las capturas de pantalla utilizadas en este análisis han sido parcialmente anonimizadas. Se han ocultado identificadores innecesarios, como direcciones MAC y el direccionamiento IP privado real del entorno de pruebas, para evitar exponer información de la infraestructura local en un repositorio público.
 
 </div>
 
 ---
 
-## 🔎 Captura y Análisis DNS (Resolución de Nombres)
+## Captura y Análisis DNS (Resolución de Nombres)
 
 <div align="justify">
 
@@ -73,7 +73,7 @@ En la captura se observa que el equipo cliente `192.168.X.X` envía una consulta
 
 </div>
 
-### 🖼️ Evidencia Visual 1: Resolución DNS en Wireshark
+### Evidencia Visual 1: Resolución DNS en Wireshark
 
 ![Captura de DNS](img/DNS.png)
 
@@ -85,7 +85,7 @@ Para conseguirlo pueden utilizarse diferentes mecanismos de distribución, como 
 
 </div>
 
-### 🖼️ Evidencia Visual 1.1: Balanceo de carga mediante DNS
+### Evidencia Visual 1.1: Balanceo de carga mediante DNS
 
 ![Esquema de Balanceo de Carga](img/Esquema-Balanceo-de-Carga.png)
 
@@ -99,7 +99,7 @@ Entre las técnicas relacionadas se encuentran el **DNS Spoofing** y el **DNS Ca
 
 ---
 
-## 🌐 Análisis HTTP (Tráfico en Texto Plano)
+## Análisis HTTP (Tráfico en Texto Plano)
 
 <div align="justify">
 
@@ -109,7 +109,7 @@ El servidor responde con el código **301 Moved Permanently**, indicando mediant
 
 </div>
 
-### 🖼️ Evidencia Visual 2: Petición HTTP GET y respuesta 301
+### Evidencia Visual 2: Petición HTTP GET y respuesta 301
 
 ![Captura HTTP](img/HTTP-Lista.png)
 
@@ -123,7 +123,7 @@ Una forma de comprobarlo en Wireshark es utilizar la función <i>Follow TCP Stre
 
 </div>
 
-### 🖼️ Evidencia Visual 2.1: Follow TCP Stream en HTTP
+### Evidencia Visual 2.1: Follow TCP Stream en HTTP
 
 ![Captura HTTP Follow TCP Stream](img/HTTP-Stream.png)
 
@@ -133,7 +133,7 @@ El resultado demuestra visualmente una de las principales diferencias de HTTP fr
 
 </div>
 
-### 🔍 Riesgo de Privacidad: Fingerprinting
+### Riesgo de Privacidad: Fingerprinting
 
 <div align="justify">
 
@@ -145,7 +145,7 @@ Estos datos pueden contribuir a realizar técnicas de <i>Fingerprinting</i>, med
 
 ---
 
-## 🔒 Análisis HTTPS/TLS (Tráfico Cifrado)
+## Análisis HTTPS/TLS (Tráfico Cifrado)
 
 <div align="justify">
 
@@ -163,7 +163,7 @@ Durante este proceso también se transmite el certificado digital del servidor, 
 
 </div>
 
-### 🖼️ Evidencia Visual 3: Handshake TLS y tráfico cifrado
+### Evidencia Visual 3: Handshake TLS y tráfico cifrado
 
 ![Captura TLS](img/TLS-Lista.png)
 
@@ -179,7 +179,7 @@ Al utilizar <i>Follow TCP Stream</i> sobre esta comunicación, el resultado ya n
 
 </div>
 
-### 🖼️ Evidencia Visual 3.1: Follow TCP Stream en HTTPS
+### Evidencia Visual 3.1: Follow TCP Stream en HTTPS
 
 ![Captura TLS Follow TCP Stream](img/TLS-Stream.png)
 
@@ -191,7 +191,7 @@ La comparación entre ambas capturas permite observar de forma práctica la dife
 
 ---
 
-## 📊 Diferencias Encontradas y Coexistencia de Protocolos
+## Diferencias Encontradas y Coexistencia de Protocolos
 
 | Atributo Técnico / Propiedad | Protocolo HTTP | Protocolo HTTPS (sobre TLS) |
 | :--- | :---: | :---: |
@@ -213,7 +213,7 @@ A pesar de las ventajas de seguridad proporcionadas por HTTPS, HTTP continúa ut
 
 ---
 
-## 🧠 Aprendizajes Clave del Laboratorio
+## Aprendizajes Clave del Laboratorio
 
 <div align="justify">
 
